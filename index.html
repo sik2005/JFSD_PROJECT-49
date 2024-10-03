@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Support Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <div class="logo">MindConnect</div>
+            
+            <label for="nav-toggle" class="icon-burger"><span></span></label>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empower Your Mental Health with MindConnect</h1>
+            <p>Connect, Heal, and Thrive in a safe space dedicated to mental well-being.</p>
+            <a href="signup.html" class="btn">Join Us Today</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service-box">
+                    <h3>Virtual Therapy</h3>
+                    <p>Schedule one-on-one therapy sessions with professional counselors from the comfort of your home.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Peer Support Groups</h3>
+                    <p>Connect with peers in our support groups and share experiences to promote healing.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Self-Help Resources</h3>
+                    <p>Access a wide range of resources tailored to help you improve your mental well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2>What Our Users Say</h2>
+        <div class="testimonial">
+            <p>"MindConnect has been a life-changing experience for me. I feel supported and understood!"</p>
+            <h3>- Sarah J.</h3>
+        </div>
+        <div class="testimonial">
+            <p>"The resources and support groups helped me navigate through tough times. Highly recommend!"</p>
+            <h3>- Mike D.</h3>
+        </div>
+        <div class="testimonial">
+            <p>"I found the virtual therapy sessions incredibly helpful. The counselors are amazing!"</p>
+            <h3>- Emily T.</h3>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Take Control of Your Mental Health?</h2>
+            <p>Join our platform today and start your journey toward better mental well-being.</p>
+            <a href="signup.html" class="btn cta-btn">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MindConnect. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+    window.onscroll = function() {
+        const nav = document.querySelector('nav');
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+</script>
+
