@@ -1,0 +1,408 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Default text color */
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background: #333; /* Dark background for navigation */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+nav.scrolled {
+    background: rgba(51, 51, 51, 0.9);
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.nav-links a:hover {
+    color: #f36f6f; /* Change color on hover */
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #f36f6f; /* Active link underline */
+}
+
+.icon-burger {
+    display: none; /* Hidden by default */
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://d3rh8m1rlgcp00.cloudfront.net/wp-content/uploads/2024/07/mental-health-2019924_1280.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Buttons */
+.btn {
+    background: #f36f6f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+.btn:hover {
+    background: #d25e5e; /* Darker shade on hover */
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Services Section */
+.services-section {
+    padding: 40px 20px;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service-box {
+    padding: 20px;
+    background: #f0f0f0; /* Light gray background for service boxes */
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.service-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Testimonials Section */
+.testimonials-section {
+    background: #e7f5ff; /* Light blue background */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px;
+    font-style: italic;
+    padding: 20px;
+    background: #fff; /* White background for testimonials */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial p {
+    margin: 10px 0;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 40px 20px;
+    background: #f36f6f; /* Call to action background */
+    color: #fff;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #333; /* Dark footer background */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        position: absolute;
+        background: #333; /* Mobile menu background */
+        top: 60px;
+        width: 100%; /* Full width */
+    }
+
+    .nav-links.active {
+        display: flex; /* Display when active */
+    }
+
+    .icon-burger {
+        display: block; /* Show burger icon */
+        cursor: pointer;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em; /* Responsive font size */
+    }
+
+    .hero-content p {
+        font-size: 1em; /* Responsive paragraph size */
+    }
+
+    .services-section {
+        flex-direction: column; /* Stack services vertically */
+        align-items: center;
+    }
+
+    .service-box {
+        margin: 10px;
+        width: 80%; /* Responsive width */
+    }
+
+    .testimonial {
+        margin: 10px;
+        width: 90%; /* Responsive testimonial width */
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background: #fff; /* White background for contact */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Darker text for heading */
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px; /* Responsive max-width */
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s ease; /* Smooth transition for focus */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #f36f6f; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+}
+
+.contact-form button {
+    background: #f36f6f; /* Button color */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-form button:hover {
+    background: #d25e5e; /* Darker shade on hover */
+}
+
+/* Login Section */
+/* Background Image for the Login Section */
+body {
+    background-image: url('https://lotuswellness.life/lotus/admin/blog_img/67974_Mental-Health.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Login Section Styles */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Adjust height based on nav */
+    padding: 20px;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3); /* Strong shadow */
+    padding: 40px 30px; /* Padding */
+    max-width: 400px; /* Max width for container */
+    width: 100%; /* Full width up to max-width */
+    transition: transform 0.3s; /* Smooth transform */
+}
+
+.login-container:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 25px; /* Space below heading */
+    color: #333; /* Darker text color */
+}
+
+/* Authentication Form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form input {
+    width: 100%; /* Full width */
+    padding: 15px;
+    margin-bottom: 15px; /* Space between fields */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s; /* Smooth transition for focus */
+}
+
+.auth-form input:focus {
+    border-color: #f36f6f; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+}
+
+.auth-form button {
+    background: #f36f6f; /* Button color */
+    color: white; /* White text */
+    padding: 15px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s; /* Smooth transition for hover */
+}
+
+.auth-form button:hover {
+    background: #d25e5e; /* Darker shade on hover */
+}
+
+/* Signup Section */
+.signup-section {
+    padding: 60px 20px;
+    background: #fff; /* White background for signup */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.signup-section h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Space below heading */
+    color: #333; /* Darker text for heading */
+}
+
+/* Signup Form */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form input,
+.signup-form select,
+.signup-form textarea {
+    width: 100%; /* Full width */
+    max-width: 500px; /* Responsive max-width */
+    padding: 15px;
+    margin: 10px 0; /* Space between fields */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border 0.3s; /* Smooth transition for focus */
+}
+
+.signup-form input:focus,
+.signup-form select:focus,
+.signup-form textarea:focus {
+    border: 1px solid #f36f6f; /* Highlight border on focus */
+    outline: none; /* Remove outline */
+}
+
+.signup-form button {
+    background: #f36f6f; /* Button color */
+    color: #fff; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background 0.3s ease; /* Smooth transition for hover */
+}
+
+.signup-form button:hover {
+    background: #d25e5e; /* Darker shade on hover */
+}
