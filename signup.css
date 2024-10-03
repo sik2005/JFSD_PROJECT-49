@@ -1,0 +1,116 @@
+/* General Styles for Sign-Up Page */
+body {
+    font-family: Arial, sans-serif; /* Font for the entire page */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for the whole page */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #333; /* Dark background for the nav */
+    color: white; /* Text color for nav */
+}
+
+.container {
+    max-width: 1200px; /* Max width for container */
+    margin: 0 auto; /* Center container */
+    padding: 10px; /* Padding around container */
+}
+
+.logo {
+    font-size: 1.5em; /* Logo size */
+    font-weight: bold; /* Logo weight */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for horizontal alignment */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.nav-links a {
+    color: white; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links a.active {
+    font-weight: bold; /* Active link style */
+}
+
+/* Sign Up Section */
+.signup-section {
+    padding: 60px 20px; /* Padding for spacing */
+    text-align: center; /* Center text */
+}
+
+.signup-container {
+    background: #fff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 400px; /* Max width for form container */
+    margin: 0 auto; /* Center container */
+    padding: 30px; /* Padding inside the container */
+}
+
+/* Form Title */
+.signup-container h2 {
+    color: #f36f6f; /* Main color for headings */
+    margin-bottom: 20px; /* Space below title */
+}
+
+/* Form Input Styles */
+.auth-form input[type="text"],
+.auth-form input[type="email"],
+.auth-form input[type="password"],
+.auth-form select {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+}
+
+/* Submit Button Styles */
+.btn {
+    background-color: #f36f6f; /* Main color for button */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    padding: 12px; /* Padding inside button */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.btn:hover {
+    background-color: #d25a5a; /* Darker shade on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark background for footer */
+    color: white; /* Text color for footer */
+    text-align: center; /* Center text */
+    padding: 10px; /* Padding inside footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .signup-section {
+        padding: 40px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .signup-container {
+        padding: 20px; /* Adjust padding for form container */
+    }
+
+    .signup-container h2 {
+        font-size: 1.5em; /* Adjust font size for heading */
+    }
+}
